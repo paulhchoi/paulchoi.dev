@@ -1,22 +1,21 @@
+import { Button } from '@/components/Button'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { Button } from '@/components/Button'
 
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
+import { Section } from '@/components/Section'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
-import logoFacebook from '@/images/logos/facebook.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
-import logoStarbucks from '@/images/logos/starbucks.svg'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
+import logoCleanGreen from '@/images/logos/clean-green.png'
 import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import { Section } from '@/components/Section'
+import logoHackerOne from '@/images/logos/hackerone.svg'
+import logoMetro from '@/images/logos/metro.png'
+import logoQvc from '@/images/logos/qvc.png'
+import logoSidecar from '@/images/logos/sidecar.svg'
 import Image, { type ImageProps } from 'next/image'
 import { LINK } from './types'
+import { ReactNode } from 'react'
 
 function ToolsSection({
   children,
@@ -92,14 +91,14 @@ const projects = [
     description:
       'A site built for a local church using Next.js/React, TypeScript, Tailwind CSS, and Sanity CMS. Initially developed in mid-2019.',
     link: { href: `${LINK.METRO}`, label: 'metrophilly.org' },
-    logo: logoAnimaginary,
+    logo: logoMetro,
   },
   {
     name: 'Metro City Hall',
     description:
       'An admin dashboard built for Metro, including features for expense management, departmental budget tracking, and event registration. Initially developed in early 2020.',
     link: { href: `${LINK.CITY_HILL}`, label: 'app.metrophilly.org' },
-    logo: logoPlanetaria,
+    logo: logoMetro,
   },
   {
     name: 'Clean & Green Philly',
@@ -109,17 +108,17 @@ const projects = [
       href: 'https://cleanandgreenphilly.org/',
       label: 'cleanandgreenphilly.org',
     },
-    logo: logoOpenShuttle,
+    logo: logoCleanGreen,
   },
   {
     name: 'HackerOne',
     description:
-      'Something something about their pentesting and assessments portal.',
+      "Developed the core Penetration Testing and Assessments platform, which serves as a bridge between global organizations and the world's largest community of ethical hackers.",
     link: {
       href: 'https://www.hackerone.com/',
       label: 'hackerone.com',
     },
-    logo: logoHelioStream,
+    logo: logoHackerOne,
   },
   {
     name: 'PFC Obershel',
@@ -145,6 +144,8 @@ function SocialLink({
     <li className={clsx(className, 'flex')}>
       <Link
         href={href}
+        target={'_blank'}
+        rel={'nofollow'}
         className="group flex text-sm font-medium text-zinc-800 transition hover:text-green-600 dark:text-zinc-200 dark:hover:text-green-600"
       >
         <Icon className="h-6 w-6 flex-none fill-zinc-500 transition group-hover:fill-green-600" />
@@ -196,7 +197,12 @@ function Role({ role }: { role: Role }) {
   return (
     <li className="flex gap-4">
       <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-        <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+        <Image
+          src={role.logo}
+          alt=""
+          className="h-7 w-7 overflow-hidden rounded-full"
+          unoptimized
+        />
       </div>
       <dl className="flex flex-auto flex-wrap gap-x-2">
         <dt className="sr-only">Company</dt>
@@ -226,7 +232,7 @@ function Resume() {
     {
       company: 'HackerOne',
       title: 'Software Engineer II',
-      logo: logoPlanetaria,
+      logo: logoHackerOne,
       start: 'Jun 2022',
       end: {
         label: 'Aug 2023',
@@ -236,14 +242,14 @@ function Resume() {
     {
       company: 'Sidecar / Quartile',
       title: 'Software Engineer II',
-      logo: logoAirbnb,
+      logo: logoSidecar,
       start: 'May 2021',
       end: 'Jun 2022',
     },
     {
       company: 'QVC',
       title: 'Software Engineer',
-      logo: logoFacebook,
+      logo: logoQvc,
       start: 'Jun 2019',
       end: 'May 2021',
     },
@@ -253,7 +259,7 @@ function Resume() {
     {
       company: 'Metro',
       title: 'Director of Digital Tech',
-      logo: logoPlanetaria,
+      logo: logoMetro,
       start: 'May 2019',
       end: {
         label: 'Present',
@@ -263,7 +269,7 @@ function Resume() {
     {
       company: 'Clean & Green Philly',
       title: 'Lead Front-end Engineer',
-      logo: logoAirbnb,
+      logo: logoCleanGreen,
       start: 'Mar 2024',
       end: {
         label: 'Present',
@@ -296,6 +302,8 @@ function Resume() {
         href={'/PaulHChoi_Resume.pdf'}
         variant="secondary"
         className="group mt-8 w-full"
+        target={'_blank'}
+        rel={'nofollow'}
       >
         Download Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
@@ -317,51 +325,61 @@ export default function Page() {
             <div className="w-prose mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 I&rsquo;ve graduated from{' '}
-                <a href={LINK.TEMPLE}>Temple University</a> in 2019 with a BS in
-                Computer Science and a minor in Data Science, and I&rsquo;m
-                currently actively searching for roles as a Software Engineer.
+                <a target={'_blank'} rel={'nofollow'} href={LINK.TEMPLE}>
+                  Temple University
+                </a>{' '}
+                in 2019 with a BS in Computer Science and a minor in Data
+                Science, and I&rsquo;m currently actively searching for roles as
+                a Software Engineer.
               </p>
               <p>
                 Since 2016, I&rsquo;ve been the Director of Digital Technologies
-                for <a href={LINK.METRO}>Metro Church</a>, based in
-                Philadelphia, PA where I work with a great team to help advance
-                our digital strategies, tools, and experiences through
-                data-driven approaches.
+                for{' '}
+                <a target={'_blank'} rel={'nofollow'} href={LINK.METRO}>
+                  Metro Church
+                </a>
+                , based in Philadelphia, PA where I work with a great team to
+                help advance our digital strategies, tools, and experiences
+                through data-driven approaches.
               </p>
               <p>
                 Every August, you can find me volunteering on the operations and
-                tech team for <a href={LINK.PFC}>Pioneers For Christ</a>, a
-                2-week long summer camp for elementary-to-high school students.
+                tech team for{' '}
+                <a target={'_blank'} rel={'nofollow'} href={LINK.PFC}>
+                  Pioneers For Christ
+                </a>
+                , a 2-week long summer camp for elementary-to-high school
+                students.
               </p>
               <p>
                 Learn more about me by checking out my{' '}
-                <a href={LINK.LINKEDIN}>LinkedIn</a>, or by sending me an{' '}
-                <a href={LINK.MAILTO_EMAIL}>email</a>. I&rsquo;m looking forward
-                to hearing from you!
+                <a target={'_blank'} rel={'nofollow'} href={LINK.LINKEDIN}>
+                  LinkedIn
+                </a>
+                , or by sending me an{' '}
+                <a target={'_blank'} rel={'nofollow'} href={LINK.MAILTO_EMAIL}>
+                  email
+                </a>
+                . I&rsquo;m looking forward to hearing from you!
               </p>
             </div>
           </div>
           <div className="lg:pl-20">
             <Resume />
-            <ul role="list" className="mt-20 lg:ml-6">
-              <SocialLink href={LINK.GITHUB} icon={GitHubIcon} className="mt-4">
-                Follow on GitHub
+            <div
+              role="list"
+              className="mt-12 flex max-w-80 flex-col justify-between gap-6 sm:flex-row sm:flex-wrap lg:ml-6"
+            >
+              <SocialLink href={LINK.GITHUB} icon={GitHubIcon}>
+                GitHub
               </SocialLink>
-              <SocialLink
-                href={LINK.LINKEDIN}
-                icon={LinkedInIcon}
-                className="mt-4"
-              >
-                Follow on LinkedIn
+              <SocialLink href={LINK.LINKEDIN} icon={LinkedInIcon}>
+                LinkedIn
               </SocialLink>
-              <SocialLink
-                href={LINK.MAILTO_EMAIL}
-                icon={MailIcon}
-                className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
-              >
+              <SocialLink href={LINK.MAILTO_EMAIL} icon={MailIcon}>
                 {LINK.EMAIL}
               </SocialLink>
-            </ul>
+            </div>
           </div>
         </div>
       </Container>
@@ -380,12 +398,18 @@ export default function Page() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  className="h-8 w-8 overflow-hidden rounded-full"
                   unoptimized
                 />
               </div>
               <h2 className="mt-6 text-base font-semibold text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
+                <Card.Link
+                  href={project.link.href}
+                  target="_blank"
+                  rel="nofollow"
+                >
+                  {project.name}
+                </Card.Link>
               </h2>
               <Card.Description>{project.description}</Card.Description>
               <p className="relative z-10 mt-6 flex text-sm font-medium text-zinc-400 transition group-hover:text-green-600 dark:text-zinc-200">

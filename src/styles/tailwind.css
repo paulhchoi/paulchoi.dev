@@ -12,3 +12,7 @@ html {
     scroll-behavior: auto;
   }
 }
+
+p > a {
+  @apply font-semibold text-zinc-600 underline transition-colors hover:text-zinc-800 dark:text-zinc-300 dark:hover:text-zinc-100;
+}

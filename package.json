@@ -1,7 +1,7 @@
 {
   "name": "paulchoi.dev",
   "version": "1.0.0",
-  "description": "Paul Choi's personal site built with Next.js",
+  "description": "Paul Choi's personal site built with Next.js and Tailwind CSS",
   "repository": {
     "type": "git",
     "url": "https://github.com/paulhchoi/paulchoi.dev.git"
@@ -45,6 +45,7 @@
     "feed": "^4.2.2",
     "next": "^14.1.4",
     "next-themes": "^0.3.0",
+    "postcss-apply": "^0.12.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark-gfm": "^4.0.0",
