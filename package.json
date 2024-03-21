@@ -1,7 +1,25 @@
 {
-  "name": "tailwindui-template",
-  "version": "0.1.0",
-  "private": true,
+  "name": "paulchoi.dev",
+  "version": "1.0.0",
+  "description": "Paul Choi's personal site built with Next.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulhchoi/paulchoi.dev.git"
+  },
+  "keywords": [
+    "react",
+    "nextjs",
+    "tailwindcss",
+    "personal",
+    "website",
+    "portfolio"
+  ],
+  "author": "Paul Choi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paulhchoi/paulchoi.dev/issues"
+  },
+  "homepage": "https://paulchoi.dev",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,16 +38,17 @@
     "@types/react": "^18.2.47",
     "@types/react-dom": "^18.2.18",
     "@types/webpack-env": "^1.18.1",
-    "autoprefixer": "^10.4.12",
+    "autoprefixer": "^10.4.19",
     "cheerio": "^1.0.0-rc.12",
     "clsx": "^2.1.0",
     "fast-glob": "^3.2.11",
     "feed": "^4.2.2",
-    "next": "^14.0.4",
-    "next-themes": "^0.2.1",
+    "next": "^14.1.4",
+    "next-themes": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "remark-gfm": "^4.0.0",
+    "sharp": "^0.33.2",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
@@ -37,7 +56,6 @@
     "eslint": "^8.56.0",
     "eslint-config-next": "^14.0.4",
     "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "sharp": "0.33.1"
+    "prettier-plugin-tailwindcss": "^0.5.11"
   }
 }

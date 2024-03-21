@@ -7,17 +7,12 @@ import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s - Spencer Sharp',
+    template: '%s - Paul Choi',
     default:
-      'Spencer Sharp - Software designer, founder, and amateur astronaut',
+      'Paul Choi - Fullstack Software engineer, community leader, and amateur drummer',
   },
   description:
-    'I’m Spencer, a software designer and entrepreneur based in New York City. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
-  alternates: {
-    types: {
-      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
-    },
-  },
+    "I'm Paul, a full-stack software engineer born and raised in Philadelphia, and I am actively seeking new opportunities. In the meantime, I'm currently in Lead Engineer positions at two local community-based non-profits as the Director of Digital Technologies and Lead Engineer at Metro, and as the Lead Frontend Engineer at Clean & Green Philly.",
 }
 
 export default function RootLayout({
