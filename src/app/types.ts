@@ -1,3 +1,5 @@
+import { ImageProps } from 'next/image'
+
 export enum LINK {
   EMAIL = 'paul@paulchoi.dev',
   MAILTO_EMAIL = 'mailto:paul@paulchoi.dev',
@@ -10,4 +12,12 @@ export enum LINK {
   PFC = 'https://pfc.us/',
   CLEANGREEN = 'https://www.cleanandgreenphilly.org/',
   TEMPLE = 'https://www.temple.edu/',
+}
+
+export interface IRole {
+  company: string
+  title: string
+  logo: ImageProps['src']
+  start: string | { label: string; dateTime: string }
+  end: string | { label: string; dateTime: string }
 }
