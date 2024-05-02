@@ -168,81 +168,81 @@ export default function HomePage() {
       <SimpleLayout
         id="uses"
         title="Things I use."
-        intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+        intro="Inspired by WesBos, this is a quick list of daily drivers and things that make my life just a bit easier."
       >
         <div className="space-y-20">
-          <ToolsSection title="Workstation">
-            <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-              I was using an Intel-based 16” MacBook Pro prior to this and the
-              difference is night and day. I&rsquo;ve never heard the fans turn
-              on a single time, even under the incredibly heavy loads I put it
-              through with our various launch simulations.
-            </Tool>
-            <Tool title="Apple Pro Display XDR (Standard Glass)">
-              The only display on the market if you want something HiDPI and
-              bigger than 27”. When you&rsquo;re working at planetary scale,
-              every pixel you can get counts.
-            </Tool>
-            <Tool title="IBM Model M SSK Industrial Keyboard">
-              They don&rsquo;t make keyboards the way they used to. I buy these
-              any time I see them go up for sale and keep them in storage in
-              case I need parts or need to retire my main.
-            </Tool>
-            <Tool title="Apple Magic Trackpad">
-              Something about all the gestures makes me feel like a wizard with
-              special powers. I really like feeling like a wizard with special
-              powers.
-            </Tool>
-            <Tool title="Herman Miller Aeron Chair">
-              If I&rsquo;m going to slouch in the worst ergonomic position
-              imaginable all day, I might as well do it in an expensive chair.
-            </Tool>
+          <ToolsSection title="Coding">
+            <Tool title="Editor: Visual Studio Code" />
+            <Tool title="Theme: Monakai Pro" />
+            <Tool title="Terminal: iTerm 2 (zsh & power10k)" />
           </ToolsSection>
-          <ToolsSection title="Development tools">
-            <Tool title="Sublime Text 4">
-              I don&rsquo;t care if it&rsquo;s missing all of the fancy IDE
-              features everyone else relies on, Sublime Text is still the best
-              text editor ever made.
-            </Tool>
-            <Tool title="iTerm2">
-              I&rsquo;m honestly not even sure what features I get with this
-              that aren&rsquo;t just part of the macOS Terminal but it&rsquo;s
-              what I use.
-            </Tool>
-            <Tool title="TablePlus">
-              Great software for working with databases. Has saved me from
-              building about a thousand admin interfaces for my various projects
-              over the years.
-            </Tool>
-          </ToolsSection>
-          <ToolsSection title="Design">
-            <Tool title="Figma">
-              We started using Figma as just a design tool but now it&rsquo;s
-              become our virtual whiteboard for the entire company. Never would
-              have expected the collaboration features to be the real hook.
-            </Tool>
-          </ToolsSection>
+
           <ToolsSection title="Productivity">
-            <Tool title="Alfred">
-              It&rsquo;s not the newest kid on the block but it&rsquo;s still
-              the fastest. The Sublime Text of the application launcher world.
-            </Tool>
-            <Tool title="Reflect">
-              Using a daily notes system instead of trying to keep things
-              organized by topics has been super powerful for me. And with
-              Reflect, it&rsquo;s still easy for me to keep all of that stuff
-              discoverable by topic even though all of my writing happens in the
-              daily note.
-            </Tool>
-            <Tool title="SavvyCal">
-              Great tool for scheduling meetings while protecting my calendar
-              and making sure I still have lots of time for deep work during the
-              week.
-            </Tool>
-            <Tool title="Focus">
-              Simple tool for blocking distracting websites when I need to just
-              do the work and get some momentum going.
-            </Tool>
+            <Tool title="Personal Tasks: OmniFocus" />
+            <Tool title="Team Project Management: Trello & GitHub Projects" />
+            <Tool title="Persistent Notes: Apple Notes & Notion" />
+          </ToolsSection>
+
+          <ToolsSection title="Computer / Office">
+            <Tool title='16" MacBook Pro (2021)' />
+            <Tool title="Lily58 split mechanical keyboard w/ Zelios V2 switches" />
+            <Tool title="Logitech MX Master 3 Mouse" />
+            <Tool title="IKEA Jerker desk" />
+            <Tool title="Ergodriven Topo standing mat" />
+            <Tool title="Plants on plants on plants" />
+          </ToolsSection>
+
+          <ToolsSection title="Privacy">
+            <Tool title="1Password & YubiKeys" />
+            <Tool title="Firefox w/ DuckDuckGo" />
+            <Tool title="ProtonMail & AnonAddy" />
+            <Tool title="NextDNS & ProtonVPN" />
+            <Tool title="Signal" />
+          </ToolsSection>
+
+          <ToolsSection title="Other Software">
+            <Tool title="Sublime Text" />
+            <Tool title="Raycast" />
+            <Tool title="Rectangle" />
+            <Tool title="Fantastical" />
+            <Tool title="Thunderbird" />
+            <Tool title="Figma" />
+            <Tool title="Canva" />
+          </ToolsSection>
+
+          <ToolsSection title="Other Tech">
+            {[
+              'Apple AirPods Pro',
+              'Blue Yeti microphone',
+              'Razor Kiyo webcam',
+              'Samsung T5 1TB external SSD',
+              'Creality Ender 3 3D printer',
+            ].map((t, index) => (
+              <Tool key={index} title={t} />
+            ))}
+          </ToolsSection>
+
+          <ToolsSection title="Browser Extensions">
+            {[
+              'Vimium',
+              'Temporary Containers',
+              'uBlock Origin',
+              'Decentraleyes',
+              'HTTPS Everywhere',
+            ].map((t, index) => (
+              <Tool key={index} title={t} />
+            ))}
+          </ToolsSection>
+
+          <ToolsSection title="Current">
+            {[
+              'Reading: Kafka on the Shore by Haruki Murakami',
+              'Board Game: Coup',
+              'PS5: Gran Turismo 7',
+              'Steam: Factorio',
+            ].map((t, index) => (
+              <Tool key={index} title={t} />
+            ))}
           </ToolsSection>
         </div>
       </SimpleLayout>
