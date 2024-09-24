@@ -7,7 +7,6 @@ import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 import { SocialLink } from '@/components/SocialLink'
 import { Tool, ToolsSection } from '@/components/ToolSection'
 import logoCleanGreen from '@/images/logos/clean-green.png'
-import logoCosmos from '@/images/logos/cosmos.svg'
 import logoHackerOne from '@/images/logos/hackerone.svg'
 import logoMetro from '@/images/logos/metro.png'
 import Image from 'next/image'
@@ -22,18 +21,11 @@ const projects = [
     logo: logoMetro,
   },
   {
-    name: 'Metro City Hall',
-    description:
-      'An admin dashboard built for Metro, including features for expense management, departmental budget tracking, and event registration. Initially developed in early 2020.',
-    link: { href: `${LINK.CITY_HILL}`, label: 'app.metrophilly.org' },
-    logo: logoMetro,
-  },
-  {
     name: 'Clean & Green Philly',
     description:
       "A civic app run by volunteers that combines several public datasets in order to categorize Philadelphia's vacant properties.",
     link: {
-      href: 'https://cleanandgreenphilly.org/',
+      href: `${LINK.CLEANGREEN}`,
       label: 'cleanandgreenphilly.org',
     },
     logo: logoCleanGreen,
@@ -43,17 +35,10 @@ const projects = [
     description:
       "Developed the core Penetration Testing and Assessments platform, which serves as a bridge between global organizations and the world's largest community of ethical hackers.",
     link: {
-      href: 'https://www.hackerone.com/',
+      href: `${LINK.HACKERONE}`,
       label: 'hackerone.com',
     },
     logo: logoHackerOne,
-  },
-  {
-    name: 'PFC Obershel',
-    description:
-      'The admin platform built for Genesis Youth Ministries, initially developed in PHP by Ezra Kwak. Development contributions included overhauling the event registration system to accept PayPal payments using their Instant Payment Notification API.',
-    link: { href: 'https://pfc.us/obershel', label: 'pfc.us/obershel' },
-    logo: logoCosmos,
   },
 ]
 
@@ -180,7 +165,7 @@ export default function HomePage() {
           <ToolsSection title="Productivity">
             <Tool title="Personal Tasks: OmniFocus" />
             <Tool title="Team Project Management: Trello & GitHub Projects" />
-            <Tool title="Persistent Notes: Apple Notes & Notion" />
+            <Tool title="Persistent Notes: Apple Notes & Obsidian" />
           </ToolsSection>
 
           <ToolsSection title="Computer / Office">
@@ -236,10 +221,9 @@ export default function HomePage() {
 
           <ToolsSection title="Current">
             {[
-              'Reading: Kafka on the Shore by Haruki Murakami',
-              'Board Game: Coup',
+              'Reading: Project Hail Mary by Andy Weir',
+              'Board Game: Avalon',
               'PS5: Gran Turismo 7',
-              'Steam: Factorio',
             ].map((t, index) => (
               <Tool key={index} title={t} />
             ))}

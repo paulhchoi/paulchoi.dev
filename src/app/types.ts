@@ -11,6 +11,7 @@ export enum LINK {
   CITY_HILL = 'https://app.metrophilly.org/',
   PFC = 'https://pfc.us/',
   CLEANGREEN = 'https://www.cleanandgreenphilly.org/',
+  HACKERONE = 'https://www.hackerone.com/',
   TEMPLE = 'https://www.temple.edu/',
 }
 
