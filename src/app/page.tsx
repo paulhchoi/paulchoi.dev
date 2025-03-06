@@ -63,7 +63,7 @@ export default function HomePage() {
                 a Software Engineer.
               </p>
               <p>
-                Since 2016, I&rsquo;ve been the Director of Digital Technologies
+                Since 2019, I&rsquo;ve been the Director of Digital Technologies
                 for{' '}
                 <a target={'_blank'} rel={'nofollow'} href={LINK.METRO}>
                   Metro Church
@@ -71,15 +71,6 @@ export default function HomePage() {
                 , based in Philadelphia, PA where I work with a great team to
                 help advance our digital strategies, tools, and experiences
                 through data-driven approaches.
-              </p>
-              <p>
-                Every August, you can find me volunteering on the operations and
-                tech team for{' '}
-                <a target={'_blank'} rel={'nofollow'} href={LINK.PFC}>
-                  Pioneers For Christ
-                </a>
-                , a 2-week long summer camp for elementary-to-high school
-                students.
               </p>
               <p>
                 Learn more about me by checking out my{' '}
@@ -221,9 +212,9 @@ export default function HomePage() {
 
           <ToolsSection title="Current">
             {[
-              'Reading: Project Hail Mary by Andy Weir',
+              'Reading: Moonwalking with Einstein by Joshua Foer',
+              'Reading: Thinking, Fast and Slow by Daniel Kahneman',
               'Board Game: Avalon',
-              'PS5: Gran Turismo 7',
             ].map((t, index) => (
               <Tool key={index} title={t} />
             ))}
