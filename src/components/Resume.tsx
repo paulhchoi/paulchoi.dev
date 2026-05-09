@@ -7,18 +7,34 @@ import { IRole } from '@/app/types'
 import { ArrowDownIcon, BriefcaseIcon } from './Icons'
 import { Button } from './Button'
 import Image from 'next/image'
+import logoDelve from '@/images/logos/delve.svg'
+import logoJpmc from '@/images/logos/jpmc.png'
 
 export function Resume() {
   let professional: Array<IRole> = [
+    {
+      company: 'JP Morgan Chase',
+      title: 'Senior Software Engineer',
+      logo: logoJpmc,
+      start: 'May 2026',
+      end: {
+        label: 'Present',
+        dateTime: new Date().getFullYear().toString(),
+      },
+    },
+    {
+      company: 'Delve',
+      title: 'Senior Software Engineer',
+      logo: logoDelve,
+      start: 'Aug 2025',
+      end: 'May 2026',
+    },
     {
       company: 'HackerOne',
       title: 'Software Engineer II',
       logo: logoHackerOne,
       start: 'Jun 2022',
-      end: {
-        label: 'Aug 2023',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      end: 'Aug 2023',
     },
     {
       company: 'Sidecar / Quartile',
@@ -52,10 +68,7 @@ export function Resume() {
       title: 'Lead Front-end Engineer',
       logo: logoCleanGreen,
       start: 'Mar 2024',
-      end: {
-        label: 'Present',
-        dateTime: new Date().getFullYear().toString(),
-      },
+      end: 'Mar 2025',
     },
   ]
 
@@ -101,6 +114,10 @@ function Role({ role }: { role: IRole }) {
 
   let endLabel = typeof role.end === 'string' ? role.end : role.end.label
   let endDate = typeof role.end === 'string' ? role.end : role.end.dateTime
+  let logoClassName =
+    role.logo === logoDelve
+      ? 'h-7 w-7 overflow-hidden rounded-full dark:invert'
+      : 'h-7 w-7 overflow-hidden rounded-full'
 
   return (
     <li className="flex gap-4">
@@ -108,7 +125,7 @@ function Role({ role }: { role: IRole }) {
         <Image
           src={role.logo}
           alt=""
-          className="h-7 w-7 overflow-hidden rounded-full"
+          className={logoClassName}
           unoptimized
         />
       </div>
